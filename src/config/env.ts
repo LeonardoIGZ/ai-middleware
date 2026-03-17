@@ -14,6 +14,7 @@ function requireEnv(name: string): string {
 
 export const env = {
     openAiApiKey: requireEnv('OPENAI_API_KEY'),
+    openRouteApiKey: requireEnv('OPENROUTE_API_KEY'),
     appApiKey: requireEnv('APP_API_KEY'),
     port: process.env.PORT ?? '3000',
 };

@@ -6,6 +6,8 @@ export function validateQuery(query: string): {valid: boolean, reason?: string} 
 
     const normalized = query.trim().toUpperCase();
 
+    // console.log(normalized.replace("\n", ' ').split(' '));
+    
     // check if query starts with SELECT keyword
     if(!normalized.startsWith('SELECT')){
         return {valid: false, reason: 'Only SELECT queries are allowed.'};
@@ -18,6 +20,7 @@ export function validateQuery(query: string): {valid: boolean, reason?: string} 
     // check if query cotains any of the dangerous keywords
     for(const keyword of dangerousKeywords){
         if(normalized.includes(keyword)){
+            console.error(`Wrong query -> ${ normalized }`);
             return {valid: false, reason: `Query cannot contain ${keyword} keyword.`}
         }
     }

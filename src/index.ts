@@ -16,6 +16,7 @@ app.use(helmet());
 const limiter = rateLimit({ windowMs: 60 * 1000, max: 20, message: { error: 'Too many request' } });
 app.use(limiter);
 
+
 app.post('/query', async (req, res) => {
     const { message } = req.body;
 
