@@ -13,8 +13,10 @@ function requireEnv(name: string): string {
 }
 
 export const env = {
-    openAiApiKey: requireEnv('OPENAI_API_KEY'),
+    geminiApiKey: requireEnv('GEMINI_API_KEY'),
     openRouteApiKey: requireEnv('OPENROUTE_API_KEY'),
+    groqApiKey: requireEnv('GROQ_API_KEY'),
+    cerebrasApiKey: requireEnv('CEREBRAS_API_KEY'),
     appApiKey: requireEnv('APP_API_KEY'),
     port: process.env.PORT ?? '3000',
 };

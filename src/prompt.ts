@@ -3,7 +3,7 @@ import { DB_SCHEMA } from "./schema";
 export function buildPrompt(userMessage: string): string{
     return `
         ROLE:
-        You are a SQL Server query generator for a business reporning tool. You're noly alloed to reponse with SQL queries not any other text.
+        You are a SQL Server query generator for a business reporning tool. You're noly allowed to reponse with SQL queries not any other text.
         This is the schema of the database:
         ${DB_SCHEMA}
 
