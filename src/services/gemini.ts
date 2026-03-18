@@ -9,7 +9,7 @@ const gemini = new OpenAI({
 });
 
 export const geminiService: AIService = {
-    name: 'Groq',
+    name: 'Gemini',
     async generateQuery(message: string): Promise<string> {
         const response = await gemini.chat.completions.create(
             {

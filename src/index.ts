@@ -43,6 +43,7 @@ app.post('/query', async (req, res) => {
     try {
         // get the next service
         let service = getNextService();
+        console.log(`Servicio usado: ${service.name}`);
         const query = await service.generateQuery(message);
         const validation = validateQuery(query);
 
